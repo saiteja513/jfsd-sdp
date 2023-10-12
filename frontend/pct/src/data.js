@@ -1,4 +1,4 @@
-export const data = [
+export const p_data = [
     {
     "id": 1,
     "product_name": "Automotive",
