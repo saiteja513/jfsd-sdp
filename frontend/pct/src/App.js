@@ -11,7 +11,6 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<< HEAD
       <Container>
           <h1 className='text-center mt-4'>Search the products</h1>
           <Form>
@@ -43,9 +42,6 @@ function App() {
             </tbody>
           </Table>
       </Container>
-=======
-    
->>>>>>> 394ff51fd563b5f417887b0bf9917ccd14449f65
     </div>
   );
 }
