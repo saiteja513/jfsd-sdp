@@ -1,17 +1,14 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Landing from "./components/Landing";
-import Footer from "./components/Footer";
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import Landing from './components/Landing/Landing'
 
 function App() {
-
   return (
-    <div className="App">
-      <Navbar/>
-      <Landing/>
-      <Footer/>
-    </div>
-  );
+      <>
+        <Navbar/>
+        <Landing/>
+      </>
+  )
 }
 
-export default App;
+export default App
