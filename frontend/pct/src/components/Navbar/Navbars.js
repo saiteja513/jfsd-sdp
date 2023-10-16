@@ -14,10 +14,10 @@ function Navbars() {
             <NavLink href="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/about">About</NavLink>
+            <NavLink href="/about">About Us</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/contact">Contact Us</NavLink>
           </NavItem>
         </Nav>
       </Navbar.Collapse>
