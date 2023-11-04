@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Snav from '../navbar/Snav';
 import axios from "axios";
+import {Button,Card,Container,Row} from 'react-bootstrap';
 
 function Product() {
 
@@ -11,50 +12,29 @@ function Product() {
     },[]);
 
     const loadUsers=async()=>{
-        // const result = await axios.get("http://localhost:8080/users")
         const result = await axios.get("http://localhost:8080/allproducts")
         setUsers(result.data);
     }
   return (
     <>
     <Snav/>
-    <div className='container'>
-        {
-        /* <table class="table">
-            <thead>
-                <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">Password</th>
-                </tr>
-            </thead>
-            <tbody>
-
-                {
-                    users.map((user,index)=>(
-                        <tr>
-                        <th scope="row" key={index}>{index+1}</th>
-                        <td>{user.pro_name}</td>
-                        <td>{user.price}</td>
-                        <td>{user.brand}</td>
-                        <td>{user.pro_link}</td>
-                        </tr>
-                    ))
-                }
-            </tbody>
-        </table> */
-        }
-        <div>
+    <Container>
+        <Row>
             {users.map((user,index) => (
-                <div key={user.pro_id} className="card">
-                <h2>{user.pro_name}</h2>
-                <h2>{user.price}</h2>
-                <p>{user.brand}</p>
-                </div>
+                <Card style={{ width: '15rem' ,height:'25rem'}}>
+                    <Card.Img variant="top" src={user.pro_link} width={100}/>
+                    <Card.Body>
+                        <Card.Title>{user.pro_name}</Card.Title>
+                        <Card.Text>
+                            <h2>₹{user.price}</h2>
+                            <p>{user.brand}</p>
+                        </Card.Text>
+                        <Button variant="primary">Go to product</Button>
+                    </Card.Body>
+                </Card>
             ))}
-        </div>
-    </div>
+        </Row>
+    </Container>
     </>
   )
 }
