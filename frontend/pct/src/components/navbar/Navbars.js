@@ -6,10 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Navbars() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="warning" variant="light">
-      <Navbar.Brand href="#">Price Comparator</Navbar.Brand>
+      <Navbar.Brand href="/">Price Comparator</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="mr-auto"  >
           <NavItem>
             <NavLink href="/">Home</NavLink>
           </NavItem>
